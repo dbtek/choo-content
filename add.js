@@ -37,9 +37,9 @@ var Content = require('./index')
       
       return html `
         <div>
-          ${inputContainer('İsmi', input({
+          ${inputContainer('Name', input({
             name: 'user-name',
-            placeholder: 'Kurum ismi',
+            placeholder: 'Full name',
             value: this.user.name,
             onChange: (e) => this.user.name = e.target.value
           }))}
