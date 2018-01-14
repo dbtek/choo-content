@@ -4,7 +4,7 @@ var Content = require('./index')
 /**
  * Class representing Add component.
  * Use it to produce content forms.
- * @exports Content
+ * @exports Add
  * @example
   class UserAdd extends Add {
     static identity (props) {
