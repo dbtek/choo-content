@@ -4,7 +4,7 @@ var header = require('./components/header')
 
 module.exports = class Content extends Component {
   constructor (id, state, emit) {
-    super()
+    super(id, state, emit)
     this.state = state
     this.emit = emit
   }

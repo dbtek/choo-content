@@ -4,8 +4,8 @@ var Content = require('./index')
 var notify = require('../notify')
 
 module.exports = class Edit extends Content {
-  constructor (args) {
-    super(args)
+  constructor (id, state, emit) {
+    super(id, state, emit)
     this.submitting = false
   }
 

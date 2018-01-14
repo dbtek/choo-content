@@ -2,8 +2,8 @@ var html = require('choo/html')
 var Content = require('./index')
 
 module.exports = class Add extends Content {
-  constructor (args) {
-    super(args)
+  constructor (id, state, emit) {
+    super(id, state, emit)
     this.submitting = false
   }
 
