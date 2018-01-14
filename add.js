@@ -1,16 +1,31 @@
 var html = require('choo/html')
 var Content = require('./index')
 
+/**
+ * Class representing Add component.
+ * Use it to produce content forms.
+ * @type {Class}
+ */
 module.exports = class Add extends Content {
   constructor (id, state, emit) {
     super(id, state, emit)
     this.submitting = false
   }
 
+  /**
+   * Implement it in extended class to create the form.
+   * @return {HTMLElement}
+   */
   form () {
     throw new Error('content:Add form() should be implemented.')
   }
 
+  /**
+   * Presave hook method. Called when form is submitted.
+   * If you really don't want to use is use save() instead.
+   * @param  {Event} e - Submit event.
+   * @return {Object}  - Returns what's returned from save()
+   */
   presave (e) {
     e.preventDefault()
     this.submitting = true
@@ -18,10 +33,19 @@ module.exports = class Add extends Content {
     return this.save(e)
   }
 
+  /**
+   * Should be implemented in extended class to handle form submission.
+   * @param  {Event} e - Submit event.
+   */
   save (e) {
     throw new Error('content:Add save() should be implemented.')
   }
 
+  /**
+   * Base render method. Shouldn't be extended in most cases.
+   * @param  {Object} props - Props send with render()
+   * @return {HTMLElement}
+   */
   createElement (props) {
     function handleCancel (e) {
       e.preventDefault()

@@ -2,6 +2,12 @@ var Component = require('nanocomponent')
 var html = require('choo/html')
 var header = require('./components/header')
 
+
+/**
+ * Base content class. Can be used to derive custom components.
+ * Use it with cases List, Add, Edit components are not suitable for.
+ * @type {Class}
+ */
 module.exports = class Content extends Component {
   constructor (id, state, emit) {
     super(id, state, emit)
@@ -9,14 +15,28 @@ module.exports = class Content extends Component {
     this.emit = emit
   }
 
+  /**
+   * Creates header. Use with super.header(text) in extended classes.
+   * @param  {String|HTMLElement} - Title.
+   * @return {HTMLElement} - Header.
+   */
   header (title) {
     return header(title)
   }
 
+  /**
+   * Footer method. Extend to add a custom footer.
+   * @return {HTMLElement}
+   */
   footer () {
     return ''
   }
 
+  /**
+   * Main content. Should be extended.
+   * @param  {Object} props - Props send with render()
+   * @return {HTMLElement}
+   */
   body (props) {
     throw new Error('Content: body() should be implemented')
   }
