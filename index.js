@@ -9,6 +9,12 @@ var header = require('./components/header')
  * @exports Content
  */
 module.exports = class Content extends Component {
+  /**
+   * Instantiates component.
+   * @param  {String} id - Id of component
+   * @param  {Object} state
+   * @param  {function} emit
+   */
   constructor (id, state, emit) {
     super(id, state, emit)
     this.state = state
