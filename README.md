@@ -17,17 +17,7 @@ choo-content depends on styles from [tailwind](https://tailwindcss.com). You may
 ### Example
 
 ```js
-var choo = require('choo')
-var css = require('sheetify')
-
 var List = require('choo-content/list')
-
-// add tailwind
-css(require('tailwindcss/dist/tailwind'))
-
-var app = choo()
-// init component preview
-app.use(require('choo-component-preview')())
 
 // User list component
 class UsersList extends List {
@@ -40,10 +30,11 @@ class UsersList extends List {
   }
 }
 
-// bind a component to a route
-app.route('/users', (state, emit, render) => render(List, {}))
-
-// bootstrap app
-app.mount(document.body)
+// render
+(state, emit, render) => {
+  render(UsersList, {})
+}
 
 ```
+
+Please see complete example at [/dbtek/choo-content/blob/master/example/index.js].

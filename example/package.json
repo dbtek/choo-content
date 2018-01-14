@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "choo": "^6.6.1",
+    "choo-component-preview": "^1.1.0",
+    "choo-content": "https://github.com/dbtek/choo-content",
+    "sheetify": "^6.2.0",
+    "tailwindcss": "^0.4.0"
+  },
+  "scripts": {
+    "start": "budo index.js:bundle.js -d public --pushstate --open --live -- -t sheetify -t es2040"
+  },
+  "devDependencies": {
+    "budo": "^10.0.4",
+    "es2040": "^1.2.6"
+  }
+}
