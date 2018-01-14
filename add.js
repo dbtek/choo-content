@@ -4,9 +4,57 @@ var Content = require('./index')
 /**
  * Class representing Add component.
  * Use it to produce content forms.
- * @type {Class}
+ * @exports Content
+ * @example
+  class UserAdd extends Add {
+    static identity (props) {
+      return 'user-new'
+    }
+
+    constructor(arg) {
+      super(arg)
+      this.user = {}
+    }
+
+    save() {
+      return client.mutate({
+        mutation: gql`
+          mutation($name: String!) {
+            createUser(name: $name) {
+              id name
+            }
+          }
+        `,
+        variables: this.user
+      }).then(res => {
+        this.submitting = false
+        this.emit('pushState', '/users')
+      })
+    }
+
+    form (props) {
+      if (!this.user) return ''
+      
+      return html `
+        <div>
+          ${inputContainer('İsmi', input({
+            name: 'user-name',
+            placeholder: 'Kurum ismi',
+            value: this.user.name,
+            onChange: (e) => this.user.name = e.target.value
+          }))}
+        </div>
+      `
+    }
+  }
  */
-module.exports = class Add extends Content {
+class Add extends Content {
+  /**
+   * Instantiates component.
+   * @param  {String} id - Id of component
+   * @param  {Object} state
+   * @param  {function} emit
+   */
   constructor (id, state, emit) {
     super(id, state, emit)
     this.submitting = false
@@ -72,3 +120,5 @@ module.exports = class Add extends Content {
     `
   }
 }
+
+module.exports = Add
