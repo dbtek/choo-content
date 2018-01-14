@@ -3,7 +3,7 @@ var html = require('choo/html')
 var header = require('./components/header')
 
 module.exports = class Content extends Component {
-  constructor ([name, state, emit]) {
+  constructor (id, state, emit) {
     super()
     this.state = state
     this.emit = emit
