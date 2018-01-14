@@ -1,0 +1,7 @@
+files:
+  - index.js
+  - add.js
+  - edit.js
+  - list.js
+  - paginated-list.js
+packageJson: package.json
