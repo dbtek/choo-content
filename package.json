@@ -12,6 +12,6 @@
   },
   "peerDependencies": {
     "choo-component-preview": "^1.1.0",
-    "tailwind": "^1.0.1"
+    "tailwindcss": "^0.4.0"
   }
 }
