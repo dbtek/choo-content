@@ -8,7 +8,7 @@ var header = require('./components/header')
  * Use it with cases List, Add, Edit components are not suitable for.
  * @exports Content
  */
-module.exports = class Content extends Component {
+class Content extends Component {
   /**
    * Instantiates component.
    * @param  {String} id - Id of component
@@ -61,3 +61,6 @@ module.exports = class Content extends Component {
     return false
   }
 }
+
+
+module.exports = Content
