@@ -50,7 +50,6 @@ var Content = require('./index')
  */
 class Add extends Content {
   /**
-   * Instantiates component.
    * @param  {String} id - Id of component
    * @param  {Object} state
    * @param  {function} emit

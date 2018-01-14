@@ -10,7 +10,6 @@ var header = require('./components/header')
  */
 class Content extends Component {
   /**
-   * Instantiates component.
    * @param  {String} id - Id of component
    * @param  {Object} state
    * @param  {function} emit
