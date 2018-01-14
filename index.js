@@ -9,11 +9,11 @@ module.exports = class Content extends Component {
     this.emit = emit
   }
 
-  header (props) {
-    return header(props.title)
+  header (title) {
+    return header(title)
   }
 
-  footer (props) {
+  footer () {
     return ''
   }
 
@@ -24,9 +24,9 @@ module.exports = class Content extends Component {
   createElement (props) {
     return html`
       <div class="content">
-        ${this.header(props)}
+        ${this.header()}
         ${this.body(props)}
-        ${this.footer(props)}
+        ${this.footer()}
       </div>
     `
   }
