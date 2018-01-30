@@ -13,7 +13,7 @@ $ yarn add choo-content
 
 ### Usage
 
-choo-content depends on styles from [tailwind](https://tailwindcss.com). You may add it via [sheetify](https://github.com/stackcss/sheetify/). It's also dependent to [choo-component-preview](https://github.com/yoshuawuyts/choo-component-preview) until it's merged to core.
+choo-content depends on styles from [Tailwind](https://tailwindcss.com). You may add it via [sheetify](https://github.com/stackcss/sheetify/). It's also dependent to [choo-component-preview](https://github.com/yoshuawuyts/choo-component-preview) until it's merged to core.
 
 
 #### Example
