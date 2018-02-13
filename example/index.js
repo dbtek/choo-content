@@ -2,7 +2,7 @@ var choo = require('choo')
 var html = require('choo/html')
 var css = require('sheetify')
 
-var List = require('choo-content/list')
+var List = require('../list')
 
 // add tailwind
 css('tailwindcss/dist/tailwind.css')
