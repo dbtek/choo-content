@@ -14,7 +14,7 @@ class Content extends Component {
    * @param  {Object} state
    * @param  {function} emit
    */
-  constructor ([id, state, emit]) {
+  constructor (id, state, emit) {
     super(...arguments)
     this.state = state
     this.emit = emit
