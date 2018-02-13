@@ -8,7 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "nanocomponent": "^6.5.0",
-    "nanologger": "^1.3.1"
+    "nanologger": "^1.3.1",
+    "notier": "^1.0.2"
   },
   "peerDependencies": {
     "choo-component-preview": "^1.1.0",

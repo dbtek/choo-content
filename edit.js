@@ -1,7 +1,7 @@
 var html = require('choo/html')
 var logger = require('nanologger')('Content:Edit')
 var Content = require('./index')
-var notify = require('../notify')
+var notify = require('notier')
 
 module.exports = class Edit extends Content {
   constructor (id, state, emit) {
