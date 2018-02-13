@@ -3,8 +3,8 @@ var List = require('./list')
 var icon = require('./components/icon')
 
 module.exports = class PaginatedList extends List {
-  constructor (arg) {
-    super(arg)
+  constructor () {
+    super(...arguments)
     this.page = (this.state.query.page || 1)
     this.itemsPerPage = 10
     this.numberOfItems = 10

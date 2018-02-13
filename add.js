@@ -54,8 +54,8 @@ class Add extends Content {
    * @param  {Object} state
    * @param  {function} emit
    */
-  constructor (id, state, emit) {
-    super(id, state, emit)
+  constructor () {
+    super(...arguments)
     this.submitting = false
   }
 
