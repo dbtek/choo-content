@@ -39,7 +39,7 @@ class UsersList extends List {
 
 ```
 
-Please see complete example at [example/index.js](/dbtek/choo-content/blob/master/example/index.js).
+Please see complete example at [example/index.js](example/index.js).
 
 ### Author
 İsmail Demirbilek - [@dbtek](https://twitter.com/dbtek)
